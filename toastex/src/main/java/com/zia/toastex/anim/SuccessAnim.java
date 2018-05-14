@@ -54,9 +54,4 @@ public class SuccessAnim extends BasePathAnim {
         paint.setStrokeWidth(getWidth() * 0.05f);
         paint.setColor(Color.parseColor("#388E3C"));
     }
-
-    @Override
-    int getDuration() {
-        return 1000;
-    }
 }

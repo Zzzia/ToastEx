@@ -55,8 +55,4 @@ public class ErrorAnim extends BasePathAnim {
         paint.setColor(Color.parseColor("#388E3C"));
     }
 
-    @Override
-    int getDuration() {
-        return 1000;
-    }
 }

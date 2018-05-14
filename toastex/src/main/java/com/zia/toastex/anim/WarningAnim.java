@@ -60,8 +60,4 @@ public class WarningAnim extends BasePathAnim {
         paint.setColor(Color.parseColor("#FFA900"));
     }
 
-    @Override
-    int getDuration() {
-        return 1000;
-    }
 }

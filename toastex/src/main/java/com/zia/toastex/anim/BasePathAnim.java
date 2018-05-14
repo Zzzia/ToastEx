@@ -7,6 +7,7 @@ import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.PathMeasure;
 import android.util.AttributeSet;
+import android.util.Log;
 
 import java.util.List;
 
@@ -27,8 +28,6 @@ public abstract class BasePathAnim extends ToastImage {
     abstract List<Path> getPaths();
 
     abstract void setPaint(Paint paint);
-
-    abstract int getDuration();
 
     @Override
     public void setDuration(int duration) {
@@ -64,7 +63,6 @@ public abstract class BasePathAnim extends ToastImage {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         if (!begin) {
-            duration = getDuration();
             setPaint(paint);
             if (color != -23333) {
                 paint.setColor(color);

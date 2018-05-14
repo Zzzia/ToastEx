@@ -227,6 +227,7 @@ public class ToastEx {
             ToastEx.currentTypeface = LOADED_TOAST_TYPEFACE;
             ToastEx.textSize = 16;
             ToastEx.tintIcon = true;
+            ToastEx.useAnim = true;
         }
 
         @CheckResult

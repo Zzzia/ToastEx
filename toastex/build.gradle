@@ -32,7 +32,7 @@ android {
                     packaging 'aar'
                     // 项目描述，复制我的话，这里需要修改。
                     name 'ToastEx'// 可选，项目名称。
-                    description 'toast with anim'// 可选，项目描述。
+                    description 'toast with anim for android'// 可选，项目描述。
                     url siteUrl // 项目主页，这里是引用上面定义好。
 
                     // 软件开源协议，现在一般都是Apache License2.0吧，复制我的，这里不需要修改。
@@ -70,7 +70,7 @@ android {
 // 生成jarDoc的task，不需要修改。
     task javadoc(type: Javadoc) {
         source = android.sourceSets.main.java.srcDirs
-        classpath +=       project.files(android.getBootClasspath().join(File.pathSeparator))
+        classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
         // destinationDir = file("../javadoc/")
         failOnError false // 忽略注释语法错误，如果用jdk1.8你的注释写的不规范就编译不过。
     }
@@ -92,8 +92,10 @@ android {
 
         configurations = ['archives']
         pkg {
-            repo = "maven"  // 上传到maven库。（这里要特别注意，如果写了maven报404错误，请在bintray创建一个仓库，这里填改成你创建的仓库的名字，如何创建请看下图。）
-            name = "ToastEx"  // 发布到Bintray上的项目名字，这里的名字不是compile 'com.yanzhenjie:andserver:1.0.1'中的andserver。
+            repo = "maven"
+            // 上传到maven库。（这里要特别注意，如果写了maven报404错误，请在bintray创建一个仓库，这里填改成你创建的仓库的名字，如何创建请看下图。）
+            name = "ToastEx"
+            // 发布到Bintray上的项目名字，这里的名字不是compile 'com.yanzhenjie:andserver:1.0.1'中的andserver。
             userOrg = 'jzljzljl' // Bintray的用户名。
             websiteUrl = siteUrl
             vcsUrl = gitUrl

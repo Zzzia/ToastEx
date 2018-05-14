@@ -58,9 +58,4 @@ public class InfoAnim extends BasePathAnim {
         paint.setStrokeWidth(getWidth() * 0.05f);
         paint.setColor(Color.parseColor("#FFA900"));
     }
-
-    @Override
-    int getDuration() {
-        return 1000;
-    }
 }
