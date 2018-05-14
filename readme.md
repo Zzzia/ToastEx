@@ -1,10 +1,29 @@
 # ToastEx
 
-#### 让你的Toast动起来
+[![](https://jitpack.io/v/Zzzia/ToastEx.svg)](https://jitpack.io/#Zzzia/ToastEx)
 
 #### 能轻松添加自己的动画，欢迎pr
 
 <img src="https://github.com/Zzzia/ToastEx/blob/master/pic/toast.gif">
+
+**Step 1.** Add the JitPack repository to your build file
+
+```
+allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+```
+
+**Step 2.** Add the dependency
+
+```
+dependencies {
+	        implementation 'com.github.Zzzia:ToastEx:1.0.0'
+	}
+```
 
 ## 用法
 
