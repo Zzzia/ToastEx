@@ -21,7 +21,7 @@ allprojects {
 
 ```
 dependencies {
-	        implementation 'com.github.Zzzia:ToastEx:1.0.0'
+	        implementation 'com.github.Zzzia:ToastEx:1.0.1'
 	}
 ```
 
