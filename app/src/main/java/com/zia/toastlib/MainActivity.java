@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.toast_anim_info).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ToastEx.Config.getInstance().setUseAnim(false).apply();//不带动画效果
+                ToastEx.Config.reset();//恢复至默认带动画的效果
                 ToastEx.info(context, TOAST).show();
             }
         });

@@ -3,8 +3,7 @@ package com.zia.toastex.anim;
 import android.animation.ValueAnimator;
 import android.content.Context;
 import android.graphics.Canvas;
-
-import com.zia.toastex.ToastEx;
+import android.util.Log;
 
 /**
  * Created by zia on 2018/5/14.
@@ -36,22 +35,18 @@ public class TextFadeAnim extends ToastText {
         super.onDraw(canvas);
         if (!begin) {
             begin = true;
+            setTextColor(color);
             ValueAnimator valueAnimator;
-            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
-                valueAnimator = ValueAnimator.ofArgb(ToastEx.NORMAL_COLOR, color);
-            } else {
-                valueAnimator = ValueAnimator.ofInt(ToastEx.NORMAL_COLOR, color);
-            }
+            valueAnimator = ValueAnimator.ofFloat(0.5f, 1);
             valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
                 @Override
                 public void onAnimationUpdate(ValueAnimator animation) {
-                    TextFadeAnim.this.color = (int) animation.getAnimatedValue();
-                    postInvalidate();
+                    setAlpha((Float) animation.getAnimatedValue());
                 }
             });
             valueAnimator.setDuration(duration);
             valueAnimator.start();
+            begin = true;
         }
-        setTextColor(color);
     }
 }

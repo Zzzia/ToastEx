@@ -162,9 +162,9 @@ public class ToastEx {
         int animTime = 0;
         if (useAnim) {
             if (duration == Toast.LENGTH_SHORT)
-                animTime = 500;
-            else
                 animTime = 1000;
+            else
+                animTime = 2000;
         }
         //load image into linearLayout if exist
         if (tintIcon && toastImage != null) {
